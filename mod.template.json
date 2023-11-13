@@ -1,0 +1,13 @@
+{
+  "_QPVersion": "0.1.1",
+  "id": "${mod_id}",
+  "name": "CameraUtils",
+  "version": "${version}",
+  "author": "Reezonate",
+  "packageId": "com.beatgames.beatsaber",
+  "packageVersion": "1.28.0_4124311467",
+  "coverImage": "cover.png",
+  "modFiles": [],
+  "libraryFiles": [],
+  "fileCopies": []
+}

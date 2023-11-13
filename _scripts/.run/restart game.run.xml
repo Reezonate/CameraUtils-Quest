@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="restart-game.ps1" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/_scripts/restart-game.ps1" workingDirectory="$PROJECT_DIR$/">
+    <method v="2" />
+  </configuration>
+</component>
