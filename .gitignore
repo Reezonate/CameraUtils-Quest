@@ -11,6 +11,7 @@ extern/
 qpm-rust
 ndkpath.txt
 extern.cmake
+qpm.shared.json
 qpm_defines.cmake
 *.log
 *.qmod
