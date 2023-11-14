@@ -103,4 +103,4 @@ jobs:
             ./${{ env.qmodName }}.qmod
             ./debug_${{ steps.libname.outputs.NAME }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
