@@ -2,17 +2,14 @@
 
 name: NDK build
 
+on:
+  push:
+    tags:
+      - "v*"
+
 env:
   module_id: CameraUtils
   qmodName: CameraUtils
-
-on:
-  workflow_dispatch:
-  push:
-    branches: [ master ]
-    tags: v*
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
