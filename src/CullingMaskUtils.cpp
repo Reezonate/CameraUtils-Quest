@@ -1,5 +1,5 @@
-#include "CameraUtils/CullingMaskUtils.hpp"
-#include "CameraUtils/VisibilityLayer.hpp"
+#include "shared/CullingMaskUtils.hpp"
+#include "shared/VisibilityLayer.hpp"
 
 using namespace UnityEngine;
 using namespace CameraUtils;

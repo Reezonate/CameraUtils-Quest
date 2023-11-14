@@ -1,8 +1,8 @@
 #pragma once
 
-#include "CameraUtils/RegisteredCamera.hpp"
-#include "CameraUtils/ICameraEffect.hpp"
-#include "CameraUtils/CameraFlags.hpp"
+#include "RegisteredCamera.hpp"
+#include "ICameraEffect.hpp"
+#include "CameraFlags.hpp"
 #include "UnityEngine/Camera.hpp"
 #include <vector>
 #include <map>

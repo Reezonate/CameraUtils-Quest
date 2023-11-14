@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CameraUtils/CameraFlags.hpp"
+#include "CameraFlags.hpp"
 #include "custom-types/shared/macros.hpp"
 #include "UnityEngine/MonoBehaviour.hpp"
 #include "UnityEngine/GameObject.hpp"

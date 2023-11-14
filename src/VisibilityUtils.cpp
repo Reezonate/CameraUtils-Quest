@@ -1,5 +1,5 @@
-#include "CameraUtils/VisibilityUtils.hpp"
-#include "CameraUtils/EnumUtils.hpp"
+#include "shared/VisibilityUtils.hpp"
+#include "shared/EnumUtils.hpp"
 
 using namespace UnityEngine;
 

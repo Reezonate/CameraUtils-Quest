@@ -1,7 +1,7 @@
-#include "CameraUtils/Hooks.hpp"
+#include "include/Hooks.hpp"
 
-#include "CameraUtils/CamerasManager.hpp"
-#include "CameraUtils/VisibilityUtils.hpp"
+#include "shared/CamerasManager.hpp"
+#include "shared/VisibilityUtils.hpp"
 
 #include "beatsaber-hook/shared/utils/typedefs-string.hpp"
 #include "beatsaber-hook/shared/utils/hooking.hpp"

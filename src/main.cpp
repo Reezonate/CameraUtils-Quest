@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-#include "CameraUtils/Hooks.hpp"
+#include "include/Hooks.hpp"
 #include "modloader/shared/modloader.hpp"
 #include "custom-types/shared/macros.hpp"
 

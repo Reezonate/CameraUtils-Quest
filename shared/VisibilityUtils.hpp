@@ -1,7 +1,7 @@
 #pragma once
 
-#include "CameraUtils/VisibilityLayer.hpp"
-#include "CameraUtils/AutoCameraRegistrator.hpp"
+#include "VisibilityLayer.hpp"
+#include "AutoCameraRegistrator.hpp"
 #include "UnityEngine/GameObject.hpp"
 #include "UnityEngine/Transform.hpp"
 #include "UnityEngine/Camera.hpp"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CameraUtils/RegisteredCamera.hpp"
+#include "RegisteredCamera.hpp"
 
 namespace CameraUtils {
     class ICameraEffect {

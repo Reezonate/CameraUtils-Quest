@@ -1,6 +1,6 @@
-#include "CameraUtils/CamerasManager.hpp"
-#include "CameraUtils/CullingMaskUtils.hpp"
-#include "CameraUtils/EnumUtils.hpp"
+#include "shared/CamerasManager.hpp"
+#include "shared/CullingMaskUtils.hpp"
+#include "shared/EnumUtils.hpp"
 
 using namespace std;
 using namespace UnityEngine;

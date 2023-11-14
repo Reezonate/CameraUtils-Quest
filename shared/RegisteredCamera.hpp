@@ -1,7 +1,7 @@
 #pragma once
 
 #include "UnityEngine/Camera.hpp"
-#include "CameraUtils/CameraFlags.hpp"
+#include "CameraFlags.hpp"
 
 namespace CameraUtils {
     struct RegisteredCamera {

@@ -1,5 +1,5 @@
-#include "CameraUtils/AutoCameraRegistrator.hpp"
-#include "CameraUtils/CamerasManager.hpp"
+#include "shared/AutoCameraRegistrator.hpp"
+#include "shared/CamerasManager.hpp"
 
 DEFINE_TYPE(CameraUtils, AutoCameraRegistrator);
 
