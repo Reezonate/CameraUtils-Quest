@@ -54,7 +54,7 @@ jobs:
           # set to true if applicable, ASSUMES the file is already a release asset
           qpm_release_bin: true
           qpm_debug_bin: true
-          qpm_qmod: ${{env.qmod_name}}.qmod
+          qpm_qmod: ${{env.qmodName}}.qmod
 
       - name: Build
         run: |
