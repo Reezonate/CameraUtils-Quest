@@ -1,7 +1,7 @@
 {
   "_QPVersion": "0.1.1",
   "name": "CameraUtils",
-  "id": "CameraUtils",
+  "id": "camera-utils",
   "author": "Reezonate",
   "version": "1.0.6",
   "packageId": "com.beatgames.beatsaber",
@@ -20,7 +20,7 @@
     }
   ],
   "modFiles": [
-    "libcamerautils.so"
+    "libcamera-utils.so"
   ],
   "libraryFiles": [
     "libbeatsaber-hook_3_14_0.so"

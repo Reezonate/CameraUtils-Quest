@@ -4,11 +4,11 @@
     "dependenciesDir": "extern",
     "info": {
       "name": "CameraUtils",
-      "id": "CameraUtils",
+      "id": "camera-utils",
       "version": "1.0.6",
       "url": null,
       "additionalData": {
-        "overrideSoName": "libcamerautils.so"
+        "overrideSoName": "libcamera-utils.so"
       }
     },
     "dependencies": [
