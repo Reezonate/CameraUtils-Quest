@@ -54,6 +54,7 @@ jobs:
           # set to true if applicable, ASSUMES the file is already a release asset
           qpm_release_bin: true
           qpm_debug_bin: true
+          qpm_qmod: ${{env.qmod_name}}.qmod
 
       - name: Build
         run: |
@@ -101,6 +102,7 @@ jobs:
         with:
           files: |
             ./${{ env.qmodName }}.qmod
+            ./build/${{ steps.libname.outputs.NAME }}
             ./debug_${{ steps.libname.outputs.NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
