@@ -69,7 +69,7 @@ foreach ($lib in $modJson.libraryFiles)
 }
 
 $zip = $qmodName + ".zip"
-$qmod = "./_scripts/output/" + $qmodName + ".qmod"
+$qmod = "./" + $qmodName + ".qmod"
 
 if ((-not($clean.IsPresent)) -and (Test-Path $qmod))
 {

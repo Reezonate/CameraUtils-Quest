@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="start-logging.ps1" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/_scripts/start-logging.ps1" scriptParameters="-All CameraUtils" workingDirectory="$PROJECT_DIR$/" executablePath="C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe">
-    <envs />
-    <method v="2" />
-  </configuration>
-</component>
