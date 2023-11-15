@@ -5,7 +5,7 @@
     "info": {
       "name": "CameraUtils",
       "id": "camera-utils",
-      "version": "1.0.8",
+      "version": "1.0.9",
       "url": "https://github.com/Reezonate/CameraUtils-Quest",
       "additionalData": {
         "overrideSoName": "libcamera-utils.so"
