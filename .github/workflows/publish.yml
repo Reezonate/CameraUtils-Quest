@@ -8,7 +8,7 @@ on:
       - "v*"
 
 env:
-  module_id: CameraUtils
+  module_id: camera-utils
   qmodName: CameraUtils
 
 jobs:
