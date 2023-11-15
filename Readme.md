@@ -33,7 +33,7 @@ void DesktopOnlyExample::Awake() {
 - Make sure to remove your camera on destroy, using `CameraUtils::CamerasManager::UnRegisterCamera(yourCamera)`
 - Alternatively, you can just add `CameraUtils::AutoCameraRegistrator` component to the Camera's GameObject
 ```c
-#include "camera-utils/shared/CamerasManager.hpp"
+#include "camera-utils/shared/AutoCameraRegistrator.hpp"
 
 void InitCamera(UnityEngine::Camera *camera) {
     camera->get_gameObject()->AddComponent<CameraUtils::AutoCameraRegistrator *>();
