@@ -2,12 +2,14 @@
 
 #include "shared/CamerasManager.hpp"
 #include "shared/VisibilityUtils.hpp"
+#include "include/DelayedCameraRegistrator.hpp"
 
 #include "beatsaber-hook/shared/utils/typedefs-string.hpp"
 #include "beatsaber-hook/shared/utils/hooking.hpp"
 
 #include "GlobalNamespace/MirrorRendererSO.hpp"
 #include "GlobalNamespace/GameScenesManager.hpp"
+#include "GlobalNamespace/GameplayCoreInstaller.hpp"
 #include "UnityEngine/SceneManagement/SceneManager.hpp"
 #include "UnityEngine/Camera.hpp"
 #include "UnityEngine/RenderTexture.hpp"
@@ -91,12 +93,28 @@ namespace CameraUtils {
 
     //endregion
 
+    //region OnGameplayCoreInstaller
+
+    MAKE_HOOK_MATCH(
+            OnGameplayCoreInstaller,
+            &GameplayCoreInstaller::InstallBindings,
+            void,
+            GameplayCoreInstaller * self
+    ) {
+        OnGameplayCoreInstaller(self);
+        auto root = self->get_transform();
+        DelayedCameraRegistrator::Construct(root);
+    }
+
+    //endregion
+
     //region installHooks
 
     void InstallHooks(Logger &logger) {
         INSTALL_HOOK(logger, GameScenesManager_ActivatePresentedSceneRootObjects);
         INSTALL_HOOK(logger, MirrorRendererSO_CreateOrUpdateMirrorCamera);
         INSTALL_HOOK(logger, MirrorRendererSO_RenderMirror);
+        INSTALL_HOOK(logger, OnGameplayCoreInstaller);
     }
 
     //endregion
