@@ -1,26 +1,26 @@
 #include "main.hpp"
 
+#include "scotland2/shared/loader.hpp"
 #include "include/Hooks.hpp"
-#include "modloader/shared/modloader.hpp"
-#include "custom-types/shared/macros.hpp"
+
+#include "beatsaber-hook/shared/utils/il2cpp-functions.hpp"
+#include "custom-types/shared/register.hpp"
 
 using namespace CameraUtils;
 
-static ModInfo modInfo;
+inline modloader::ModInfo modInfo = {MOD_ID, VERSION, 0};
 
-Logger &getLogger() {
-    static auto *logger = new Logger(modInfo);
-    return *logger;
+namespace CameraUtils {
+    Paper::ConstLoggerContext<12> Main::Logger = Paper::ConstLoggerContext("CameraUtils");
 }
 
-extern "C" void setup(ModInfo &info) {
-    info.id = MOD_ID;
-    info.version = VERSION;
-    modInfo = info;
+extern "C" void setup(CModInfo *info) {
+    *info = modInfo.to_c();
+    Paper::Logger::RegisterFileContextId(Main::Logger.tag);
 }
 
-extern "C" void load() {
+extern "C" void load_load() {
     il2cpp_functions::Init();
     custom_types::Register::AutoRegister();
-    CameraUtils::InstallHooks(getLogger());
+    CameraUtils::InstallHooks(Main::Logger);
 }

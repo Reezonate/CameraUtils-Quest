@@ -1,29 +1,30 @@
 {
-  "_QPVersion": "0.1.1",
+  "_QPVersion": "1.1.0",
   "name": "CameraUtils",
   "id": "camera-utils",
+  "modloader": "Scotland2",
   "author": "Reezonate",
-  "version": "1.0.10",
-  "packageId": "com.beatgames.beatsaber",
-  "packageVersion": "1.28.0_4124311467",
-  "coverImage": "cover.png",
+  "version": "1.1.0",
+  "description": "camera-utils, version 1.1.0!",
   "dependencies": [
     {
-      "version": "^0.33.0",
-      "id": "codegen",
-      "downloadIfMissing": "https://github.com/sc2ad/BeatSaber-Quest-Codegen/releases/download/v0.33.0/Codegen.qmod"
+      "version": "^0.17.0",
+      "id": "custom-types",
+      "downloadIfMissing": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.7/CustomTypes.qmod"
     },
     {
-      "version": "^0.15.23",
-      "id": "custom-types",
-      "downloadIfMissing": "https://github.com/sc2ad/Il2CppQuestTypePatching/releases/download/v0.15.24/CustomTypes.qmod"
+      "version": "^3.6.3",
+      "id": "paper",
+      "downloadIfMissing": "https://github.com/Fernthedev/paperlog/releases/download/v3.6.3/paperlog.qmod"
     }
   ],
-  "modFiles": [
+  "modFiles": [],
+  "lateModFiles": [
     "libcamera-utils.so"
   ],
   "libraryFiles": [
-    "libbeatsaber-hook_3_14_0.so"
+    "libbeatsaber-hook_5_1_6.so",
+    "libsl2.so"
   ],
   "fileCopies": [],
   "copyExtensions": []

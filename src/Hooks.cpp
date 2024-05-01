@@ -11,13 +11,11 @@
 #include "GlobalNamespace/GameScenesManager.hpp"
 #include "GlobalNamespace/GameplayCoreInstaller.hpp"
 #include "UnityEngine/SceneManagement/SceneManager.hpp"
-#include "UnityEngine/Camera.hpp"
 #include "UnityEngine/RenderTexture.hpp"
 #include "UnityEngine/Vector3.hpp"
 #include "UnityEngine/Quaternion.hpp"
 #include "UnityEngine/Matrix4x4.hpp"
 #include "UnityEngine/Rect.hpp"
-#include "System/Collections/Generic/List_1.hpp"
 
 using namespace GlobalNamespace;
 using namespace UnityEngine;
@@ -39,7 +37,7 @@ namespace CameraUtils {
             auto rootGameObjects = SceneManager::GetSceneByName(sceneName).GetRootGameObjects();
 
             for (int j = 0; j < rootGameObjects.size(); j++) {
-                auto rootGO = rootGameObjects->get(j);
+                auto rootGO = rootGameObjects.get(j);
                 auto cameras = rootGO->GetComponentsInChildren<Camera *>();
 
                 for (int k = 0; k < cameras.size(); k++) {
@@ -63,7 +61,7 @@ namespace CameraUtils {
             RenderTexture * renderTexture
     ) {
         MirrorRendererSO_CreateOrUpdateMirrorCamera(self, currentCamera, renderTexture);
-        CamerasManager::RegisterMirrorCamera(self->mirrorCamera, currentCamera);
+        CamerasManager::RegisterMirrorCamera(self->_mirrorCamera, currentCamera);
     }
 
     MAKE_HOOK_MATCH(
@@ -88,7 +86,7 @@ namespace CameraUtils {
                 reflectionPlaneNormal
         );
 
-        CamerasManager::UnRegisterCamera(self->mirrorCamera);
+        CamerasManager::UnRegisterCamera(self->_mirrorCamera);
     }
 
     //endregion
@@ -110,7 +108,7 @@ namespace CameraUtils {
 
     //region installHooks
 
-    void InstallHooks(Logger &logger) {
+    void InstallHooks(const Paper::ConstLoggerContext<12> &logger) {
         INSTALL_HOOK(logger, GameScenesManager_ActivatePresentedSceneRootObjects);
         INSTALL_HOOK(logger, MirrorRendererSO_CreateOrUpdateMirrorCamera);
         INSTALL_HOOK(logger, MirrorRendererSO_RenderMirror);

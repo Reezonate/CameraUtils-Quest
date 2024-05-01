@@ -1,7 +1,7 @@
 #pragma once
 
-#include "beatsaber-hook/shared/utils/logging.hpp"
+#include "paper/shared/logger.hpp"
 
 namespace CameraUtils {
-    void InstallHooks(Logger &logger);
+    void InstallHooks(const Paper::ConstLoggerContext<12> &logger);
 }

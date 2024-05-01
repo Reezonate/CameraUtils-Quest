@@ -1,5 +1,10 @@
 #pragma once
 
-#include "beatsaber-hook/shared/utils/logging.hpp"
+#include "paper/shared/logger.hpp"
 
-Logger &getLogger();
+namespace CameraUtils {
+    class Main {
+       public:
+        static Paper::ConstLoggerContext<12> Logger;
+    };
+}

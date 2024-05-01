@@ -1,19 +1,23 @@
 {
+  "version": "0.1.0",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "info": {
     "name": "CameraUtils",
     "id": "camera-utils",
-    "version": "1.0.10",
+    "version": "1.1.0",
     "url": "https://github.com/Reezonate/CameraUtils-Quest",
     "additionalData": {
       "overrideSoName": "libcamera-utils.so"
     }
   },
+  "workspace": {
+    "scripts": {}
+  },
   "dependencies": [
     {
       "id": "beatsaber-hook",
-      "versionRange": "^3.14.0",
+      "versionRange": "^5.1.6",
       "additionalData": {
         "extraFiles": [
           "src/inline-hook"
@@ -21,20 +25,24 @@
       }
     },
     {
-      "id": "modloader",
-      "versionRange": "^1.2.3",
+      "id": "scotland2",
+      "versionRange": "^0.1.4",
       "additionalData": {}
     },
     {
-      "id": "codegen",
-      "versionRange": "^0.33.0",
+      "id": "bs-cordl",
+      "versionRange": "3500.*",
       "additionalData": {}
     },
     {
       "id": "custom-types",
-      "versionRange": "^0.15.23",
+      "versionRange": "^0.17.0",
+      "additionalData": {}
+    },
+    {
+      "id": "paper",
+      "versionRange": "^3.6.3",
       "additionalData": {}
     }
-  ],
-  "workspace": null
+  ]
 }
