@@ -4,16 +4,16 @@
   "id": "camera-utils",
   "modloader": "Scotland2",
   "author": "Reezonate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "packageId": "com.beatgames.beatsaber",
-  "packageVersion": "1.35.0_8016709773",
+  "packageVersion": "1.37.0_9064817954",
   "description": "Modding library that standardizes the use of GameObject layers and provides tools for easier rendering pipeline modifications",
   "coverImage": "cover.png",
   "dependencies": [
     {
-      "version": "^0.17.0",
+      "version": "^0.17.8",
       "id": "custom-types",
-      "downloadIfMissing": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.7/CustomTypes.qmod"
+      "downloadIfMissing": "https://github.com/QuestPackageManager/Il2CppQuestTypePatching/releases/download/v0.17.8/CustomTypes.qmod"
     },
     {
       "version": "^3.6.3",
