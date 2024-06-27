@@ -4,7 +4,7 @@
   "id": "camera-utils",
   "modloader": "Scotland2",
   "author": "Reezonate",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "packageId": "com.beatgames.beatsaber",
   "packageVersion": "1.37.0_9064817954",
   "description": "Modding library that standardizes the use of GameObject layers and provides tools for easier rendering pipeline modifications",
@@ -26,7 +26,7 @@
     "libcamera-utils.so"
   ],
   "libraryFiles": [
-    "libbeatsaber-hook_5_1_6.so",
+    "libbeatsaber-hook_5_1_8.so",
     "libsl2.so"
   ],
   "fileCopies": [],
