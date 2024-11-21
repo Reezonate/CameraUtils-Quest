@@ -19,7 +19,7 @@ extern "C" void setup(CModInfo *info) {
     Paper::Logger::RegisterFileContextId(Main::Logger.tag);
 }
 
-extern "C" void load_load() {
+extern "C" void late_load() {
     il2cpp_functions::Init();
     custom_types::Register::AutoRegister();
     CameraUtils::InstallHooks(Main::Logger);
