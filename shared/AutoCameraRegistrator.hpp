@@ -12,7 +12,7 @@ namespace CameraUtils {
     class Cpp_AutoCameraRegistrator {
         //region Cpp_MonoBehavior
 
-       public:
+        public:
         UnityEngine::GameObject *gameObject = nullptr;
 
         Cpp_AutoCameraRegistrator(const Cpp_AutoCameraRegistrator &other) = delete;
@@ -23,10 +23,10 @@ namespace CameraUtils {
 
         //region CameraFlags
 
-       private:
+        private:
         CameraFlags _additionalFlags = CameraFlags::CF_None;
 
-       public:
+        public:
         [[nodiscard]] CameraFlags get_AdditionalFlags() const;
 
         void set_AdditionalFlags(CameraFlags value);
@@ -35,14 +35,14 @@ namespace CameraUtils {
 
         //region Events
 
-       private:
+        private:
         UnityEngine::Camera *_camera = nullptr;
         bool _flagsDirty = true;
         int _lastCullingMask = 0;
 
         [[nodiscard]] inline bool get_IsDirty() const;
 
-       public:
+        public:
         void Awake();
 
         void OnDisable();
@@ -53,7 +53,7 @@ namespace CameraUtils {
 
         //region Register / UnRegister
 
-       private:
+        private:
         void Register();
 
         void UnRegister();
@@ -66,22 +66,22 @@ namespace CameraUtils {
 
 //region  <----------- CODEGEN ------------------------------------------------------------------------------
 
-DECLARE_CLASS_CODEGEN(CameraUtils, AutoCameraRegistrator, UnityEngine::MonoBehaviour, ;
-        DECLARE_INSTANCE_METHOD(void, Awake);
+DECLARE_CLASS_CODEGEN(CameraUtils, AutoCameraRegistrator, UnityEngine::MonoBehaviour) {
+    DECLARE_INSTANCE_METHOD(void, Awake);
 
-        DECLARE_INSTANCE_METHOD(void, OnDestroy);
+    DECLARE_INSTANCE_METHOD(void, OnDestroy);
 
-        DECLARE_INSTANCE_METHOD(void, OnDisable);
+    DECLARE_INSTANCE_METHOD(void, OnDisable);
 
-        DECLARE_INSTANCE_METHOD(void, OnPreCull);
+    DECLARE_INSTANCE_METHOD(void, OnPreCull);
 
-        private:
-        Cpp_AutoCameraRegistrator* _internal = nullptr;
+    private:
+    Cpp_AutoCameraRegistrator *_internal = nullptr;
 
-        public:
-[[nodiscard]] CameraFlags get_AdditionalFlags() const;
+    public:
+    [[nodiscard]] CameraFlags get_AdditionalFlags() const;
 
-        void set_AdditionalFlags(CameraFlags value);
-)
+    void set_AdditionalFlags(CameraFlags value);
+};
 
 //endregion

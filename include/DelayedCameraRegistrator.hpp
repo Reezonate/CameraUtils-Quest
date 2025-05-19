@@ -10,7 +10,7 @@ namespace CameraUtils {
     class Cpp_DelayedCameraRegistrator {
         //region Cpp_MonoBehavior
 
-       public:
+        public:
         UnityEngine::GameObject *gameObject = nullptr;
 
         Cpp_DelayedCameraRegistrator(const Cpp_DelayedCameraRegistrator &other) = delete;
@@ -21,10 +21,10 @@ namespace CameraUtils {
 
         //region Update
 
-       private:
+        private:
         int _skippedFrames = 0;
 
-       public:
+        public:
         void Update();
 
         //endregion
@@ -37,15 +37,15 @@ namespace CameraUtils {
 
 #include "custom-types/shared/macros.hpp"
 
-DECLARE_CLASS_CODEGEN(CameraUtils, DelayedCameraRegistrator, UnityEngine::MonoBehaviour, ;
-        DECLARE_INSTANCE_METHOD(void, Update);
+DECLARE_CLASS_CODEGEN(CameraUtils, DelayedCameraRegistrator, UnityEngine::MonoBehaviour) {
+    DECLARE_INSTANCE_METHOD(void, Update);
 
-        DECLARE_INSTANCE_METHOD(void, OnDestroy);
+    DECLARE_INSTANCE_METHOD(void, OnDestroy);
 
-        public:
-        Cpp_DelayedCameraRegistrator* cpp = nullptr;
+    public:
+    Cpp_DelayedCameraRegistrator *cpp = nullptr;
 
-        static DelayedCameraRegistrator *Construct(UnityEngine::Transform *parent);
-)
+    static DelayedCameraRegistrator *Construct(UnityEngine::Transform *parent);
+};
 
 //endregion
