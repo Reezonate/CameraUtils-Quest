@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.schema.json",
   "version": "0.1.0",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
@@ -34,7 +35,13 @@
       "restart": [
         "pwsh restart-game.ps1 $0:?"
       ]
-    }
+    },
+    "qmodIncludeDirs": [
+      "extern/libs",
+      "build"
+    ],
+    "qmodIncludeFiles": [],
+    "qmodOutput": "camera-utils.qmod"
   },
   "dependencies": [
     {

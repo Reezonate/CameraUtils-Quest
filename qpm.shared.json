@@ -36,7 +36,13 @@
         "restart": [
           "pwsh restart-game.ps1 $0:?"
         ]
-      }
+      },
+      "qmodIncludeDirs": [
+        "extern/libs",
+        "build"
+      ],
+      "qmodIncludeFiles": [],
+      "qmodOutput": "camera-utils.qmod"
     },
     "dependencies": [
       {
