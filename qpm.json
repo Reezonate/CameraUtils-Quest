@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.schema.json",
   "version": "0.1.0",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
@@ -12,7 +13,35 @@
     }
   },
   "workspace": {
-    "scripts": {}
+    "scripts": {
+      "build": [
+        "pwsh build.ps1 $0:?"
+      ],
+      "clean": [
+        "qpm s build -- -clean"
+      ],
+      "close": [
+        "pwsh close-game.ps1 $0:?"
+      ],
+      "copy": [
+        "pwsh copy.ps1 $0:?"
+      ],
+      "log": [
+        "pwsh start-logging.ps1 $0:?"
+      ],
+      "qmod": [
+        "pwsh buildQMOD.ps1 camera-utils"
+      ],
+      "restart": [
+        "pwsh restart-game.ps1 $0:?"
+      ]
+    },
+    "qmodIncludeDirs": [
+      "extern/libs",
+      "build"
+    ],
+    "qmodIncludeFiles": [],
+    "qmodOutput": "camera-utils.qmod"
   },
   "dependencies": [
     {
