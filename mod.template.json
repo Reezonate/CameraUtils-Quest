@@ -7,7 +7,7 @@
   "version": "${version}",
   "description": "Modding library that standardizes the use of GameObject layers and provides tools for easier rendering pipeline modifications",
   "packageId": "com.beatgames.beatsaber",
-  "packageVersion": "1.40.4_5283",
+  "packageVersion": "1.40.6_6407",
   "coverImage": "cover.png",
   "dependencies": [],
   "modFiles": [],
